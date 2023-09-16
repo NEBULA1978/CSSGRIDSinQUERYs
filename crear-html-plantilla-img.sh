@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# Nombre del archivo HTML de destino
+html_file="index-img.html"
+
+# Contenido HTML
+html_content='<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+  <style>
+    /* Estilos para la galería y el elemento destacado */
+    .gallery {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Latest News</h1>
+    <div class="gallery">
+      <article class="card">
+        <img src="./img/camisetaBlanca.png" alt="Camiseta Blanca">
+      </article>
+      <article class="card">
+        <img src="./img/camisetaNegra.png" alt="Camiseta Negra">
+      </article>
+      <article class="card">
+        <img src="./img/corazon.png" alt="Corazón">
+      </article>
+      <article class="card">
+        <img src="./img/rey_atanagildo.png" alt="Rey Atanagildo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_ataulfo.png" alt="Rey Ataulfo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_ervigio.png" alt="Rey Ervigio">
+      </article>
+      <article class="card">
+        <img src="./img/rey_leogivildo.png" alt="Rey Leogivildo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_recesvinto.png" alt="Rey Recesvinto">
+      </article>
+      <article class="card">
+        <img src="./img/rey_sisebuto.png" alt="Rey Sisebuto">
+      </article>
+      <article class="card">
+        <img src="./img/rey_teodorico.png" alt="Rey Teodorico">
+      </article>
+    </div>
+  </div>
+</body>
+</html>'
+
+# Escribir el contenido HTML en el archivo
+echo "$html_content" > "$html_file"
+
+# Confirmación
+echo "El archivo $html_file ha sido creado con el contenido HTML."
