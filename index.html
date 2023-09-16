@@ -8,18 +8,18 @@
     .gallery {
       display: grid;
       gap: 1rem;
-      grid-auto-rows: 22rem;
       grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     }
 
-    .featured {
-      grid-column: span 2;
+    .card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
     }
 
-    .card-img img {
+    .card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover; /* Esto hará que la imagen se ajuste al tamaño del contenedor manteniendo la relación de aspecto */
+      height: auto;
     }
   </style>
 </head>
@@ -27,19 +27,36 @@
   <div class="container">
     <h1>Latest News</h1>
     <div class="gallery">
-      <article class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit.</article>
-      <article class="card">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</article>
-
-      <article class="card featured">
-        <div class="card-img">
-          <img src="./img/camisetaBlanca.png" alt="">
-          <img src="./img/camisetaBlanca.png" alt="">
-          <img src="./img/camisetaBlanca.png" alt="">
-        </div>
-        <h4 class="card-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+      <article class="card">
+        <img src="./img/camisetaBlanca.png" alt="Camiseta Blanca">
       </article>
-      <article class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</article>
-      <article class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate fuga nihil</article>
+      <article class="card">
+        <img src="./img/camisetaNegra.png" alt="Camiseta Negra">
+      </article>
+      <article class="card">
+        <img src="./img/corazon.png" alt="Corazón">
+      </article>
+      <article class="card">
+        <img src="./img/rey_atanagildo.png" alt="Rey Atanagildo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_ataulfo.png" alt="Rey Ataulfo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_ervigio.png" alt="Rey Ervigio">
+      </article>
+      <article class="card">
+        <img src="./img/rey_leogivildo.png" alt="Rey Leogivildo">
+      </article>
+      <article class="card">
+        <img src="./img/rey_recesvinto.png" alt="Rey Recesvinto">
+      </article>
+      <article class="card">
+        <img src="./img/rey_sisebuto.png" alt="Rey Sisebuto">
+      </article>
+      <article class="card">
+        <img src="./img/rey_teodorico.png" alt="Rey Teodorico">
+      </article>
     </div>
   </div>
 </body>
