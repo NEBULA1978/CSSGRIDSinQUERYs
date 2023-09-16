@@ -1,14 +1,16 @@
 #!/bin/bash
 
+# Introducir nombre sin comillas
 # Nombre del archivo HTML a analizar
-archivo_html="index-img.html"
+archivo_html=index-img.html
 
 # Realizar el reemplazo en el archivo HTML y guardar la salida en un archivo temporal
 sed_script=""
 
 # Mostrar todos los patrones en el archivo
-patrones_encontrados=($(grep -oE 'src="[^"]+"' "$archivo_html" | sort | uniq))
+mapfile -t patrones_encontrados < <(grep -oE 'src="[^"]+"' "$archivo_html" | sort | uniq)
 num_patrones=${#patrones_encontrados[@]}
+
 
 echo "Patrones encontrados en el archivo HTML:"
 for ((i=0; i<num_patrones; i++)); do
